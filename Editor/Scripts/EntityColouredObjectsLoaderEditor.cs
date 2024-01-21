@@ -6,12 +6,12 @@ using RTSEngine.Health;
 using RTSEngine.Entities;
 using RTSEngine.Utilities;
 
-[CustomEditor(typeof(EntityColourtedObjectsLoader))]
+[CustomEditor(typeof(EntityColouredObjectsLoader))]
 
 public class EntityColouredObjectsLoaderEditor : Editor
 {
 
-    private EntityColourtedObjectsLoader Instance = null;
+    private EntityColouredObjectsLoader Instance = null;
 
     SerializedProperty IsRendererLoaded;
     SerializedProperty coloredRenderers;
@@ -22,7 +22,7 @@ public class EntityColouredObjectsLoaderEditor : Editor
 
     void OnEnable()
     {
-        this.Instance = (EntityColourtedObjectsLoader)target;
+        this.Instance = (EntityColouredObjectsLoader)target;
         IsRendererLoaded = serializedObject.FindProperty("IsRendererLoaded");
         coloredRenderers = serializedObject.FindProperty("coloredRenderers");
         UseParentNotList = serializedObject.FindProperty("UseParentNotList");
